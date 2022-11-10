@@ -72,6 +72,7 @@
 - [ ] Access user location to recomend closer matches
 - [ ] Set match prefrences
 - [ ] Make it mobile compatible with responsive deisgn
+- [ ] Users can add their deployed projects
 
 ---
 
