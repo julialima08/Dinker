@@ -7,10 +7,12 @@ const users = [...Array(50)].map(() => ({
   username: falso.randUserName(),
   email: falso.randEmail(),
   password: falso.randPassword(),
-  skills: [],
-  socialLinks: falso.randDomainName(),
-  projects: falso.randDomainName(),
-  avatar: ''
+  // skills: [],
+  // socialLinks: [],
+  // projects: [],
+  avatar: '',
+  createdAt: falso.randPastDate(),
+  updatedAt: falso.randPastDate()
 }))
 module.exports = {
   up: async (queryInterface, Sequelize) => {

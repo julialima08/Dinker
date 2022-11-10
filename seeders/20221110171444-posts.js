@@ -10,8 +10,10 @@ module.exports = {
         return {
           title: falso.randWord(),
           body: falso.randText({ charCount: 50 }),
-          skills: [],
-          creatorId: user.id
+          // skills: [],
+          creatorId: user.id,
+          createdAt: falso.randPastDate(),
+          updatedAt: falso.randPastDate()
         }
       })
     )
