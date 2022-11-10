@@ -10,7 +10,7 @@
 
 #### Project Links:
 
-#### [Back-end Repo](https://github.com/julialima08/Dinker-Backend) | [Trello](https://trello.com/b/YxSVlTrr/dinker) | [Slide Presentation](https://docs.google.com/presentation/d/181A0gw7fQdPlOxnxm4D_OIwOTarAPQDEdFhRXgvxGcQ/edit?usp=sharing) | [Deployed Project](bleh)
+#### [Back-end Repo](https://github.com/julialima08/Dinker-Frontend/blob/main/README.md) | [Trello](https://trello.com/b/YxSVlTrr/dinker) | [Slide Presentation](https://docs.google.com/presentation/d/181A0gw7fQdPlOxnxm4D_OIwOTarAPQDEdFhRXgvxGcQ/edit?usp=sharing) | [Deployed Project](bleh)
 
 #### Julia's Links:
 
