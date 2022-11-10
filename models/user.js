@@ -13,16 +13,40 @@ module.exports = (sequelize, DataTypes) => {
   }
   User.init(
     {
-      name: DataTypes.STRING,
-      username: DataTypes.STRING,
-      email: DataTypes.STRING,
-      skills: DataTypes.ARRAY,
-      password: DataTypes.STRING,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      skills: DataTypes.ARRAY(DataTypes.STRING),
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       avatar: DataTypes.STRING,
-      socialLinks: DataTypes.ARRAY,
-      projects: DataTypes.ARRAY,
-      posts: DataTypes.STRING,
-      matches: DataTypes.STRING
+      socialLinks: DataTypes.ARRAY(DataTypes.STRING),
+      projects: DataTypes.ARRAY(DataTypes.STRING),
+      posts: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        references: {
+          model: 'posts',
+          key: 'id'
+        }
+      },
+      matches: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        references: {
+          model: 'user_matches',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,

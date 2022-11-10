@@ -13,8 +13,22 @@ module.exports = (sequelize, DataTypes) => {
   }
   User_match.init(
     {
-      userId: DataTypes.STRING,
-      matchId: DataTypes.STRING
+      userId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      },
+      matchId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,

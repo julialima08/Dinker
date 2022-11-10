@@ -13,10 +13,17 @@ module.exports = (sequelize, DataTypes) => {
   }
   Post.init(
     {
-      tittle: DataTypes.STRING,
-      creator: DataTypes.STRING,
+      title: DataTypes.STRING,
+      creatorId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      },
       body: DataTypes.STRING,
-      skills: DataTypes.STRING
+      skills: DataTypes.ARRAY(DataTypes.STRING)
     },
     {
       sequelize,

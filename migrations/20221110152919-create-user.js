@@ -10,34 +10,46 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       username: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       skills: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       password: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       avatar: {
         type: Sequelize.STRING
       },
       socialLinks: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       projects: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       posts: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        references: {
+          model: 'posts',
+          key: 'id'
+        }
       },
       matches: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        references: {
+          model: 'user_matches',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
