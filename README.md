@@ -4,7 +4,7 @@
 
 ### By: Julia Lima, Jen Dunlap, and John Boyle
 
-![Dinker](https://ucarecdn.com/46f2cb06-3d64-4ec9-bf81-7439ca7b23e7/)
+![Dinker](https://ucarecdn.com/97a9f2bc-3ada-4efd-b017-24949096b7f9/)
 
 ---
 
