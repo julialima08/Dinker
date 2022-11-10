@@ -37,20 +37,6 @@ module.exports = {
       projects: {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
-      posts: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
-        references: {
-          model: 'posts',
-          key: 'id'
-        }
-      },
-      matches: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
-        references: {
-          model: 'user_matches',
-          key: 'id'
-        }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

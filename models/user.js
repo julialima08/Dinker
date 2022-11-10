@@ -45,21 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       avatar: DataTypes.STRING,
       socialLinks: DataTypes.ARRAY(DataTypes.STRING),
-      projects: DataTypes.ARRAY(DataTypes.STRING),
-      posts: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        references: {
-          model: 'posts',
-          key: 'id'
-        }
-      },
-      matches: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        references: {
-          model: 'user_matches',
-          key: 'id'
-        }
-      }
+      projects: DataTypes.ARRAY(DataTypes.STRING)
     },
     {
       sequelize,
