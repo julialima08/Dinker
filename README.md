@@ -32,8 +32,6 @@
 
 ### **_Technologies_**
 
-![PERN](https://repository-images.githubusercontent.com/248812720/56902700-c5bd-11ea-813f-ed8631377258)
-
 - PostgreSQL
 - Express
 - React
@@ -41,6 +39,8 @@
 - CSS
 
 ---
+
+![ERD](https://ucarecdn.com/4c086913-b0c2-446a-964a-6b35f6fc0045/)
 
 ### **_Getting Started_**
 
