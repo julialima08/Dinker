@@ -28,9 +28,7 @@
 
 ### **_Description_**
 
-#### You ready to get Dinked? Welcome to Dinker, the dev linker. Linking devs from around the world! Looking for a React developer to help you with your project? or what about a Mongo savant to help with your database. 
-
----
+#### You ready to get Dinked? Welcome to Dinker, the dev linker. Linking devs from around the world! Dinker is a platform and community that empowers developers to collaborate and create a team to build the next great application.
 
 ### **_Technologies_**
 
