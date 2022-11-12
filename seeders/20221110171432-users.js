@@ -6,7 +6,7 @@ const users = [...Array(50)].map(() => ({
   name: falso.randFullName(),
   username: falso.randUserName(),
   email: falso.randEmail(),
-  password: falso.randPassword(),
+  passwordDigest: falso.randPassword(),
   // skills: [],
   // socialLinks: [],
   // projects: [],
