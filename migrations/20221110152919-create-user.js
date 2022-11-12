@@ -24,7 +24,7 @@ module.exports = {
       skills: {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
-      password: {
+      passwordDigest: {
         allowNull: false,
         type: Sequelize.STRING
       },
