@@ -43,13 +43,16 @@ const UpdatePassword = async (req, res) => {
     if (
       user &&
       (await middleware.comparePassword(
-        user.dataValues.passwordDigest,
+        user.dataValues.passworddigest,
         req.body.oldPassword
       ))
     ) {
-      let passwordDigest = await middleware.hashPassword(req.body.newPassword)
-      await user.update({ passwordDigest })
-      return res.send({ status: 'success!', msg: 'pass updated' })
+      let passworddigest = await middleware.hashPassword(req.body.newPassword)
+      await user.update({ passworddigest })
+      return res.send({
+        status: 'success!',
+        msg: `pass updated`
+      })
     }
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
   } catch (error) {
