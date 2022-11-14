@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       skills: DataTypes.ARRAY(DataTypes.STRING),
-      passwordDigest: {
+      passworddigest: {
         type: DataTypes.STRING,
         allowNull: false
       },
