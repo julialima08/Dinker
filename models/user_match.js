@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       },
       matchId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.ARRAY(DataTypes.INTEGER),
         onDelete: 'CASCADE',
         references: {
           model: 'users',
