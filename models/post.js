@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       },
       body: DataTypes.STRING,
-      skills: DataTypes.ARRAY(DataTypes.STRING)
+      skills: DataTypes.STRING
     },
     {
       sequelize,
