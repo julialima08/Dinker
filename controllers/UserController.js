@@ -1,4 +1,4 @@
-const { User, Post } = require('../models')
+const { User, Post, User_match } = require('../models')
 
 const GetUsers = async (req, res) => {
   try {
@@ -51,6 +51,25 @@ const DeleteUser = async (req, res) => {
   }
 }
 
+const CreateMatch = async (req, res) => {
+  try {
+    const match = await User_match.create({ ...req.body })
+    res.send(match)
+  } catch (error) {
+    throw error
+  }
+}
+
+const GetUserMatches = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_Id)
+    const userMatch = await User_match.findByPk(userId)
+    res.send(userMatch)
+  } catch (error) {
+    throw error
+  }
+}
+
 // const GetUserPosts = async (req, res) => {
 //   try {
 //     const posts = await User.findByPk(req.params.user_Id, {
@@ -67,6 +86,8 @@ module.exports = {
   GetUserById,
   CreateUser,
   UpdateUser,
-  DeleteUser
+  DeleteUser,
+  GetUserMatches,
+  CreateMatch
   // GetUserPosts
 }
