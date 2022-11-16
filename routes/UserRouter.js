@@ -17,7 +17,7 @@ Router.delete(
   middleware.verifyToken,
   controller.DeleteUser
 )
-Router.post('/match', controller.CreateMatch)
+Router.post('/match/:user_Id', controller.CreateMatch)
 Router.get('/usermatches/:user_Id', controller.GetUserMatches)
 // Router.get('/:user_Id/posts', controller.GetUserPosts)
 

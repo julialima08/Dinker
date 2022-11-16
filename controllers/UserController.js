@@ -55,9 +55,12 @@ const CreateMatch = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_Id)
     const matcher = await User.findByPk(userId)
-    await matcher.addUser([req.body.matchId])
+    await matcher.addMatchees([req.body.matchId])
     await matcher.save()
-    res.send(matcher)
+    const match = await User.findByPk(userId, {
+      include: { model: User, as: 'matchees' }
+    })
+    res.send(match)
   } catch (error) {
     throw error
   }
@@ -66,8 +69,10 @@ const CreateMatch = async (req, res) => {
 const GetUserMatches = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_Id)
-    const userMatch = await User_match.findByPk(userId)
-    res.send(userMatch)
+    const match = await User.findByPk(userId, {
+      include: { model: User, as: 'matchees' }
+    })
+    res.send(match)
   } catch (error) {
     throw error
   }
