@@ -10,12 +10,29 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "i": "^0.3.7",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "npm": "^9.1.1",
     "pg": "^8.8.0",
     "sequelize": "^6.25.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "dinker-backend",
+  "description": "## Date: 11/09/2022",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julialima08/Dinker-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julialima08/Dinker-Backend/issues"
+  },
+  "homepage": "https://github.com/julialima08/Dinker-Backend#readme"
 }
