@@ -18,7 +18,7 @@ module.exports = {
         }
       },
       matchId: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER),
+        type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'users',

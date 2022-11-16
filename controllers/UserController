@@ -53,8 +53,11 @@ const DeleteUser = async (req, res) => {
 
 const CreateMatch = async (req, res) => {
   try {
-    const match = await User_match.create({ ...req.body })
-    res.send(match)
+    let userId = parseInt(req.params.user_Id)
+    const matcher = await User.findByPk(userId)
+    await matcher.addUser([req.body.matchId])
+    await matcher.save()
+    res.send(matcher)
   } catch (error) {
     throw error
   }
