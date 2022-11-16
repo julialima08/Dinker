@@ -1,4 +1,4 @@
-const { User, Post } = require('../models')
+const { User, Post, User_match } = require('../models')
 
 const GetUsers = async (req, res) => {
   try {
@@ -51,6 +51,33 @@ const DeleteUser = async (req, res) => {
   }
 }
 
+const CreateMatch = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_Id)
+    const matcher = await User.findByPk(userId)
+    await matcher.addMatchees([req.body.matchId])
+    await matcher.save()
+    const match = await User.findByPk(userId, {
+      include: { model: User, as: 'matchees' }
+    })
+    res.send(match)
+  } catch (error) {
+    throw error
+  }
+}
+
+const GetUserMatches = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_Id)
+    const match = await User.findByPk(userId, {
+      include: { model: User, as: 'matchees' }
+    })
+    res.send(match)
+  } catch (error) {
+    throw error
+  }
+}
+
 // const GetUserPosts = async (req, res) => {
 //   try {
 //     const posts = await User.findByPk(req.params.user_Id, {
@@ -67,6 +94,8 @@ module.exports = {
   GetUserById,
   CreateUser,
   UpdateUser,
-  DeleteUser
+  DeleteUser,
+  GetUserMatches,
+  CreateMatch
   // GetUserPosts
 }
