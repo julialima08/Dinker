@@ -33,14 +33,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
       },
-      skills: DataTypes.ARRAY(DataTypes.STRING),
+      skills: DataTypes.STRING,
       passworddigest: {
         type: DataTypes.STRING,
         allowNull: false
       },
       avatar: DataTypes.STRING,
-      socialLinks: DataTypes.ARRAY(DataTypes.STRING),
-      projects: DataTypes.ARRAY(DataTypes.STRING)
+      socialLinks: DataTypes.STRING,
+      projects: DataTypes.STRING
     },
     {
       sequelize,
