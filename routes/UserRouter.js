@@ -19,6 +19,5 @@ Router.delete(
 )
 Router.post('/match/:user_Id', controller.CreateMatch)
 Router.get('/usermatches/:user_Id', controller.GetUserMatches)
-// Router.get('/:user_Id/posts', controller.GetUserPosts)
 
 module.exports = Router
